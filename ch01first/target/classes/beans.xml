@@ -10,6 +10,9 @@
     -->
     <bean id="someService" class="com.xdl.service.impl.SomeServiceImpl" />
     <bean id="someService2" class="com.xdl.service.impl.SomeServiceImpl" />
+    <bean id="otherService" class="com.xdl.service.OtherService" />
+
+
     <!--创建非自定义对象-->
-    <bean id="mydate" class="java.util.Date" />
+    <bean id="myDate" class="java.util.Date" />
 </beans>

@@ -1,5 +1,6 @@
 package com.xdl;
 
+import com.xdl.service.OtherService;
 import com.xdl.service.SomeService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -50,8 +51,8 @@ public class MyTest {
         String config = "beans.xml";
         ApplicationContext ctx = new ClassPathXmlApplicationContext(config);
         // 获取对象数量
-        int nums = ctx.getBeanDefinitionCount();
-        System.out.println("容器中定义对象的数量==" + nums);
+        int num = ctx.getBeanDefinitionCount();
+        System.out.println("容器中定义对象的数量==" + num);
         //获取对象名称数组
         String names[] = ctx.getBeanDefinitionNames();
         for (String name : names) {
@@ -67,7 +68,10 @@ public class MyTest {
     public void test5() {
         String config = "beans.xml";
         ApplicationContext ctx = new ClassPathXmlApplicationContext(config);
-        Date date = ctx.getBean(Date.class);
+        Date date = (Date) ctx.getBean("myDate");
         System.out.println("date=== " + date);
+
+        OtherService otherService = (OtherService) ctx.getBean("otherService");
+        otherService.doOther();
     }
 }
