@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ch02-di-xml" />
         <module name="ch01first" />
+        <module name="ch02-di-xml" />
+        <module name="homework" />
         <module name="ch01-first" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch04-homework" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
