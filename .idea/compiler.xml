@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch02-di-xml" />
         <module name="ch01first" />
+        <module name="ch01-first" />
       </profile>
     </annotationProcessing>
   </component>

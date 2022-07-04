@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--声明bean-->
+    <!--
+        DI:给属性赋值
+        1、set注入，spring带用类的set方法，通过set方法完成属性赋值
+            简单类型（java中八大基本数据类型和String）的set注入：
+            语法： <bean id="xxx" class="yyy">
+                    <property name="属性名" value="属性值"/>
+                    ...
+                  <bean>
+            引用类型：
+            语法： <bean id="xxx" class="yyy">
+                    <property name="属性名" ref="bean id"/>
+                    ...
+                  <bean>
+       2、构造注入：在spring调用类中的有参构造方法创建对象的同时给属性赋值
+            语法：
+    -->
+    <bean id="myStudent" class="com.xdl.ba03.Student">
+        <constructor-arg name="name" value="xdl" />
+        <constructor-arg name="age" value="18" />
+        <constructor-arg name="school" ref="mySchool" />
+    </bean>
+    <bean id="myStudent2" class="com.xdl.ba03.Student">
+        <constructor-arg index="0" value="18" />
+        <constructor-arg index="1" value="xdl" />
+        <constructor-arg index="2" ref="mySchool" />
+    </bean>
+    <!--省略name或index则需要保证constructor-arg的顺序与构造方法的参数的顺序一致-->
+    <bean id="myStudent3" class="com.xdl.ba03.Student">
+        <constructor-arg value="18" />
+        <constructor-arg value="xdl" />
+        <constructor-arg ref="mySchool" />
+    </bean>
+
+    <bean id="mySchool" class="com.xdl.ba03.School">
+        <constructor-arg name="name" value="河南大学" />
+        <constructor-arg name="address" value="河南开封" />
+    </bean>
+    <!--使用构造注入创建File对象-->
+    <bean id="file" class="java.io.File">
+        <constructor-arg name="parent" value="/Users/mac/common/code/java/spring-demo/ch02-di-xml" />
+        <constructor-arg name="child" value="pom.xml" />
+    </bean>
+
+</beans>

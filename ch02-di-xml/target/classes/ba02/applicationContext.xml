@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--声明bean-->
+    <!--
+        DI:给属性赋值
+        1、set注入，spring带用类的set方法，通过set方法完成属性赋值
+            简单类型（java中八大基本数据类型和String）的set注入：
+            语法： <bean id="xxx" class="yyy">
+                    <property name="属性名" value="属性值"/>
+                    ...
+                  <bean>
+            引用类型：
+            语法： <bean id="xxx" class="yyy">
+                    <property name="属性名" ref="bean id"/>
+                    ...
+                  <bean>
+    -->
+    <bean id="myStudent" class="com.xdl.ba02.Student">
+        <property name="name" value="xdl" /> <!--setName("xdl")-->
+        <property name="age" value="18" />
+        <property name="school" ref="mySchool" /> <!-- setSchool(), 与school的bean没有先后顺序-->
+    </bean>
+
+    <bean id="mySchool" class="com.xdl.ba02.School">
+        <property name="name" value="河南大学" />
+        <property name="address" value="河南开封" />
+    </bean>
+</beans>
