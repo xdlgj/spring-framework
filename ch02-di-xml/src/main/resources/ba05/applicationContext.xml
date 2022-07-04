@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--声明bean-->
+    <!--
+        引用类型自动注入：byName、byType
+        byName：
+            语法：
+                <bean id="xxx" class="yyy" autowire="byName">
+                    简单类型属性赋值
+                </bean>
+       byType：java类中引用类型的数据类型和bean的class是同源，这些的bean能够赋值给引用类型
+            同源关系：
+                1、java中引用类型的数据类型和bean的class值是一样的。
+                2、java中引用类型的数据类型和bean的class值是父子类关系的。
+                3、java中引用类型的数据类型和bean的class值是接口和实现类关系的。
+            语法：
+                <bean id="xxx" class="yyy" autowire="byType">
+                    简单类型属性赋值
+                </bean>
+            注意：
+                在xml配置文件中，符合条件的对象只能有一个
+    -->
+    <bean id="myStudent" class="com.xdl.ba05.Student" autowire="byType">
+        <property name="name" value="xdl" /> <!--setName("xdl")-->
+        <property name="age" value="18" />
+    </bean>
+<!--    <bean id="mySchool" class="com.xdl.ba05.School">-->
+<!--        <property name="name" value="河南大学" />-->
+<!--        <property name="address" value="河南开封" />-->
+<!--    </bean>-->
+    <!--父子关系-->
+    <bean id="primarySchool" class="com.xdl.ba05.PrimarySchool">
+        <property name="name" value="史营村小学" />
+        <property name="address" value="河南叶县" />
+    </bean>
+
+</beans>
