@@ -3,23 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-    <!--声明组件扫描器：使用注解必须加入这个语句
-        component-scan组件扫描器，组件是java对象
-        属性：base-package 注解在你的项目中的包名
-            架构会扫描这个包和子包中所有类，找到类中的所有注解。
-            遇到注解后，按照注解表示功能去创建对象给属性赋值
-    -->
-    <context:component-scan base-package="com.xdl.ba01"/>
-    <!--扫描多个包的三种方式-->
-    <!--第一种，使用多次组件扫描器-->
-    <context:component-scan base-package="com.xdl.ba01"/>
-    <context:component-scan base-package="com.xdl.ba02"/>
-    <!--第二种，使用分隔符（；或，）指定多个包-->
-    <context:component-scan base-package="com.xdl.ba01;com.xdl.ba02"/>
-    <!--第三种，指定父包-->
     <context:component-scan base-package="com.xdl"/>
-    <!--读取外部的属性配置文件
-        property-placeholder：读取properties这样的文件
-    -->
     <context:property-placeholder location="classpath:/myconfig.properties"/>
 </beans>
