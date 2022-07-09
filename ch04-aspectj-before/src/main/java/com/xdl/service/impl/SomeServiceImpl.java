@@ -7,4 +7,8 @@ public class SomeServiceImpl implements SomeService {
     public void doSome(String name, Integer age) {
         System.out.println("业务方法doSome(),创建商品订单");
     }
+    @Override
+    public void doOther(){
+        System.out.println("====doOther=====");
+    }
 }
