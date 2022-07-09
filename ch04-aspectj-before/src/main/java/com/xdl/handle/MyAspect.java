@@ -55,7 +55,7 @@ public class MyAspect {
      * 获取方法执行时的信息，例如方法名称，参数聚合
      */
     @Before(value = "execution(* *..SomeServiceImpl.do*(..))")
-    public void myBefore2(JoinPoint joinPoint) {
+    void myBefore2(JoinPoint joinPoint) {
         System.out.println("前置通知中获取目标方法的定义：" + joinPoint.getSignature());
         System.out.println("前置通知中获取目标方法名称：" + joinPoint.getSignature().getName());
         // 获取参数

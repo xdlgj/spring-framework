@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/homework/pom.xml" />
         <option value="$PROJECT_DIR$/ch03-di-anno/pom.xml" />
         <option value="$PROJECT_DIR$/ch04-aspectj-before/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04-aspectj-before/ch05-aspectj-afterreturning/pom.xml" />
       </list>
     </option>
   </component>
