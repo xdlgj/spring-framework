@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch08-aspectj-after" />
+        <module name="ch09-aspectj-pointcut" />
         <module name="ch01first" />
         <module name="ch07-aspectj-afterthrowing" />
         <module name="ch02-di-xml" />
