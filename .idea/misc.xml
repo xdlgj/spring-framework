@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/ch05-aspectj-afterreturning/pom.xml" />
         <option value="$PROJECT_DIR$/ch06-aspectj-around/pom.xml" />
         <option value="$PROJECT_DIR$/ch07-aspectj-afterthrowing/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08-aspectj-after/pom.xml" />
       </list>
     </option>
   </component>
