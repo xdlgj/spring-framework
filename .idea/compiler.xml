@@ -16,7 +16,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ch01first" target="1.8" />
+      <module name="ch02-di-xml" target="1.8" />
+      <module name="ch03-di-anno" target="1.8" />
+      <module name="ch04-aspectj-before" target="1.8" />
       <module name="ch04-homework" target="1.8" />
+      <module name="homework" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
