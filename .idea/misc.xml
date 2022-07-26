@@ -9,10 +9,14 @@
         <option value="$PROJECT_DIR$/ch07-aspectj-afterthrowing/pom.xml" />
         <option value="$PROJECT_DIR$/ch08-aspectj-after/pom.xml" />
         <option value="$PROJECT_DIR$/ch09-aspectj-pointcut/pom.xml" />
+        <option value="$PROJECT_DIR$/ch01-cusotom-ioc/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
   </component>
 </project>

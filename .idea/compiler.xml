@@ -13,6 +13,7 @@
         <module name="ch02-di-xml" />
         <module name="ch06-aspectj-around" />
         <module name="homework" />
+        <module name="ch01-cusotom-ioc" />
         <module name="ch03-di-anno" />
         <module name="ch04-aspectj-before" />
         <module name="ch05-aspectj-afterreturning" />
@@ -20,7 +21,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ch01first" target="1.8" />
+      <module name="ch02-di-xml" target="1.8" />
+      <module name="ch03-di-anno" target="1.8" />
+      <module name="ch04-aspectj-before" target="1.8" />
       <module name="ch04-homework" target="1.8" />
+      <module name="homework" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

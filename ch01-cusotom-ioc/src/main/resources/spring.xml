@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!-- 设置JavaBean对应的bean标签 -->
+    <bean id="userDao" class="com.xdl.spring.dao.UserDao"></bean>
+    <bean id="userService" class="com.xdl.spring.service.UserService"></bean>
+</beans>
