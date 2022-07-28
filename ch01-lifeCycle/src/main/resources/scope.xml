@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        Bean的作用域
+            singleton单例作用域
+                Spring IOC容器在启动时，会将所有在singleton作用域的bean对象实例化，并设置搭配单利缓存池中，
+                lazy-init属性（懒加载）默认为false，为true是容器启动的时候不会实例化，只有在获取（getBean）时才会被实例化。
+                lazy-init属性为什么要设置为false？
+                    1、可以提前发现潜在的配置问题
+                    2、Bean对象在启动时就会设置在单例缓存池中，使用时不需要在实例化，提高运行效率
+                什么对象适合作为单例对象？
+                    无状态对象（不存在改变当前对象状态的成员变量）
+                    使用对象：controller层、service层、dao层
+            prototype原型作用域
+                    Spring IOC在启动的时候，不会将bean对象实例化设置到单利缓存池中
+    -->
+<!--    <bean id="userService" class="com.xdl.service.UserService"></bean>-->
+    <bean id="userService2" class="com.xdl.service.UserService" lazy-init="true"></bean>
+<!--    <bean id="userService3" class="com.xdl.service.UserService" lazy-init="true" scope="prototype"></bean>-->
+
+</beans>

@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/ch08-aspectj-after/pom.xml" />
         <option value="$PROJECT_DIR$/ch09-aspectj-pointcut/pom.xml" />
         <option value="$PROJECT_DIR$/ch01-cusotom-ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/ch01-lifeCycle/pom.xml" />
       </list>
     </option>
   </component>

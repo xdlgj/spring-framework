@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        静态工厂实例化
+            1、定义工厂类及对应的的静态方法
+            2、配置bean对象对应的工厂类及对象方法
+            id：需要实例化bean的对象名称
+            class：  静态工厂类路径
+            factory-method：静态工厂中实例化bean对象的方法
+    -->
+    <bean id="roleService" class="com.xdl.factory.StaticFactory" factory-method="createRoleService"></bean>
+</beans>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        实例化工厂
+            1、定义实例化工厂bean
+            2、应用工厂bean 指定工厂创建方法（方法为非静态）
+    -->
+    <bean id="instanceFactory" class="com.xdl.factory.InstanceFactory" ></bean>
+    <bean id="roleService" factory-bean="instanceFactory" factory-method="createRoleService" ></bean>
+</beans>
