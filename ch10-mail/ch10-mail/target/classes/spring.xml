@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启自动扫描-->
+    <context:component-scan base-package="com.xdl"/>
+    <!-- 邮件发送器（提供邮件发送接口，透明创建java mail的MimeMessage以及邮件发送的配置） -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.qq.com"/>
+        <property name="port" value="25"/>
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="username" value="928645139"/>
+        <property name="password" value="pczsueujmvhdbcef"/>
+    </bean>
+
+    <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
+        <property name="from" value="928645139@qq.com"/>
+        <property name="subject" value="Spring Mail"/>
+    </bean>
+
+    <bean id="orderManager" class="com.xdl.SimpleOrderManager">
+    </bean>
+</beans>
