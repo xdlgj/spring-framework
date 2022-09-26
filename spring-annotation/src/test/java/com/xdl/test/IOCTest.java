@@ -4,6 +4,7 @@ import com.xdl.bean.Person;
 import com.xdl.condition.MacCondition;
 import com.xdl.config.MainConfig;
 import com.xdl.config.MainConfig2;
+import com.xdl.config.MainConfig3;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -44,6 +45,24 @@ public class IOCTest {
         String[] names = applicationContext.getBeanDefinitionNames();
         for (String name : names) {
             System.out.println(name);
+        }
+    }
+    @Test
+    public void test03() {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig3.class);
+        //默认获取到的时工厂bean调用getObject创建的对象
+        Object colorFactoryBean = applicationContext.getBean("colorFactoryBean");
+        Object colorFactoryBean2 = applicationContext.getBean("colorFactoryBean");
+        //通过&符号获取FactoryBean本身
+        Object colorFactoryBean3 = applicationContext.getBean("&colorFactoryBean");
+        // colorFactoryBean的类型：class com.xdl.bean.Color
+        System.out.println("colorFactoryBean的类型：" + colorFactoryBean.getClass());
+        System.out.println("&colorFactoryBean的类型：" + colorFactoryBean3.getClass());
+        // isSingleton()返回值为true时，两个相等，返回false时不相等
+        System.out.println(colorFactoryBean == colorFactoryBean2);
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println(beanDefinitionName);
         }
     }
 
