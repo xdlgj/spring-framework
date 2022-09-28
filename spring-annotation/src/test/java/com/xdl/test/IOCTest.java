@@ -2,9 +2,7 @@ package com.xdl.test;
 
 import com.xdl.bean.Person;
 import com.xdl.condition.MacCondition;
-import com.xdl.config.MainConfig;
-import com.xdl.config.MainConfig2;
-import com.xdl.config.MainConfig3;
+import com.xdl.config.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -64,6 +62,18 @@ public class IOCTest {
         for (String beanDefinitionName : beanDefinitionNames) {
             System.out.println(beanDefinitionName);
         }
+    }
+    @Test
+    public void test04() {
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig4.class);
+        applicationContext.getBean("dog");
+        applicationContext.close();
+    }
+    @Test
+    public void test05() {
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig5.class);
+        Person person = (Person) applicationContext.getBean("person");
+        System.out.println(person);
     }
 
 }

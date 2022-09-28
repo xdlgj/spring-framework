@@ -34,6 +34,6 @@ import org.springframework.stereotype.Controller;
 public class MainConfig {
     @Bean(value = {"p1", "p2"}) // 给容器中注册一个Bean；类型为返回值的类型，id默认是用方法名作为id, 可以通过name/value手动设置id
     public Person person() {
-        return new Person("李四", 20);
+        return new Person("李四", 20, "");
     }
 }

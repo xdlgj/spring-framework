@@ -22,11 +22,11 @@ public class MainConfig2 {
     @Bean("zhang_san")
     public Person person01() {
         System.out.println("person bean 被创建....");
-        return new Person("张三", 18);
+        return new Person("张三", 18, "");
     }
     @Conditional(WinCondition.class)
     @Bean("li_si")
     public Person person02() {
-        return new Person("李四", 20);
+        return new Person("李四", 20, "");
     }
 }
