@@ -32,6 +32,7 @@ public class IOCTest_Autowired {
     @Test
     public void test03() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigOfAutowire.class);
+        System.out.println("applicationContext：" + applicationContext);
         Boss boss = (Boss) applicationContext.getBean("boss");
         System.out.println(boss);
     }
