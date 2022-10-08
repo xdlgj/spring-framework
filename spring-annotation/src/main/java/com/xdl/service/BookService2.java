@@ -1,15 +1,16 @@
 package com.xdl.service;
 
 import com.xdl.dao.BookDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service
-public class BookService {
+import javax.annotation.Resource;
+import javax.inject.Inject;
 
-    @Qualifier("bookDao")
-    @Autowired
+@Service
+public class BookService2 {
+
+    //@Resource(name = "bookDao")
+    @Inject
     private BookDao bookDao;
     @Override
     public String toString() {
