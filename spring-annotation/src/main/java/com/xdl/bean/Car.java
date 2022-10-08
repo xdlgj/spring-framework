@@ -1,0 +1,7 @@
+package com.xdl.bean;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Car {
+}

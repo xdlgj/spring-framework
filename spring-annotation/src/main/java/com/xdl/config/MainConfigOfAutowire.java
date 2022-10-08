@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Primary;
  *      }
  */
 @Configuration
-@ComponentScan({"com.xdl.service", "com.xdl.controller", "com.xdl.dao"})
+@ComponentScan({"com.xdl.service", "com.xdl.controller", "com.xdl.dao", "com.xdl.bean"})
 public class MainConfigOfAutowire {
 
     @Primary

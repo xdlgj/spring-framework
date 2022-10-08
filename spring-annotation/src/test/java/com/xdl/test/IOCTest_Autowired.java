@@ -1,5 +1,6 @@
 package com.xdl.test;
 
+import com.xdl.bean.Boss;
 import com.xdl.config.MainConfigOfAutowire;
 import com.xdl.dao.BookDao;
 import com.xdl.service.BookService;
@@ -27,7 +28,12 @@ public class IOCTest_Autowired {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigOfAutowire.class);
         BookService2 bookService2 = (BookService2) applicationContext.getBean("bookService2");
         System.out.println(bookService2);
-
+    }
+    @Test
+    public void test03() {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfigOfAutowire.class);
+        Boss boss = (Boss) applicationContext.getBean("boss");
+        System.out.println(boss);
     }
 }
 
